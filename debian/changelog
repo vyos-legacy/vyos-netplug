@@ -1,0 +1,5 @@
+vyos-netplug (1.2.9.2-1) unstable; urgency=low
+
+  * Initial release to fix link detection issues when dhcp is being used 
+
+ -- hagbard <vyosdev@derith.de>  Wed, 16 Jan 2019 12:02:49 -0800

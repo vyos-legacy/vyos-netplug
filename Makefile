@@ -30,19 +30,19 @@ install:
 	install $(install_opts) -m 755 scripts/rc.netplugd $(DESTDIR)/$(initdir)/netplugd
 	install $(install_opts) -m 444 man/man8/netplugd.8 $(DESTDIR)/$(mandir)/man8
 
-hg_root := $(shell hg root)
-tar_root := netplug-$(version)
-tar_file := $(hg_root)/$(tar_root).tar.bz2
-files := $(shell hg manifest)
+#hg_root := $(shell hg root)
+#tar_root := netplug-$(version)
+#tar_file := $(hg_root)/$(tar_root).tar.bz2
+#files := $(shell hg manifest)
 
-tarball: $(tar_file)
-
-$(tar_file): $(files)
-	mkdir -p $(hg_root)/$(tar_root)
-	echo $(files) | tr ' ' '\n' | \
-	  xargs -i cp -a --parents {} $(hg_root)/$(tar_root)
-	tar -C $(hg_root) -c -f - $(tar_root) | bzip2 -9 > $(tar_file)
-	rm -rf $(hg_root)/$(tar_root)
+#tarball: $(tar_file)
+#
+#$(tar_file): $(files)
+#	mkdir -p $(hg_root)/$(tar_root)
+#	echo $(files) | tr ' ' '\n' | \
+#	  xargs -i cp -a --parents {} $(hg_root)/$(tar_root)
+#	tar -C $(hg_root) -c -f - $(tar_root) | bzip2 -9 > $(tar_file)
+#	rm -rf $(hg_root)/$(tar_root)
 
 clean:
 	-rm -f netplugd *.o *.tar.bz2

@@ -1,0 +1,3 @@
+etc/netplugd.conf	/etc/netplug
+scripts/netplug		/etc/netplug
+netplugd		/sbin
