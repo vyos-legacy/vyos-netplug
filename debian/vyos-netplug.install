@@ -1,3 +1,5 @@
 etc/netplugd.conf	/etc/netplug
 scripts/netplug		/etc/netplug
 netplugd		/sbin
+vyos-scripts/linkup.d	/etc/netplug
+vyos-scripts/linkdown.d	/etc/netplug
