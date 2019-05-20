@@ -80,7 +80,7 @@ handle_interface(struct nlmsghdr *hdr, void *arg)
     if (i == NULL)
         return 0;
 
-    ifsm_flagchange(i, info->ifi_flags);
+    //ifsm_flagchange(i, info->ifi_flags);
 
     if_info_update_interface(hdr, attrs);
 
@@ -201,8 +201,8 @@ poll_interfaces(void)
         if (ioctl(sockfd, SIOCGIFFLAGS, &ifr) < 0)
             do_log(LOG_ERR, "%s: can't get flags: %m", info->name);
         else {
-            ifsm_flagchange(info, ifr.ifr_flags);
-            ifsm_flagpoll(info);
+            //ifsm_flagchange(info, ifr.ifr_flags);
+            //ifsm_flagpoll(info);
         }
 
         return 0;
