@@ -1,8 +1,15 @@
+vyos-netplug (1.2.9.2-3+equuleus) unstable; urgency=low
+
+  * supports vyos 1.3 (Equuleus) builds
+
+ -- hagbard <vyosdev@derith.de>  Tue, 18 Jun 2019 14:01:30 -0700
+
 vyos-netplug (1.2.9.2-2) unstable; urgency=low
 
   * moved /etc/netplug/link(up|down).d/ from vyatta-cfg-system into this package
 
  -- hagbard <vyosdev@derith.de>  Thu, 17 Jan 2019 12:26:59 -0800
+
 vyos-netplug (1.2.9.2-1) unstable; urgency=low
 
   * Initial release to fix link detection issues when dhcp is being used 
